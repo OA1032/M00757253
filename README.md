@@ -6,3 +6,4 @@
  ## when another animation can be played  
  ## Download instructions
  ## Where to pull the files from 
+ ## OPC library inclusion for simulator enables function due to ##that program using this library 
