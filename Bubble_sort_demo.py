@@ -16,6 +16,6 @@ def bubbleSort(lis): # function for sorting algo
         #print(lis)
     return lis
 
-pdb.set_trace() # set a trace for the debugger
+##pdb.set_trace() # set a trace for the debugger
 bubbleSort(L) # perform function (step thru)
 print(L) # show the list after sorting
