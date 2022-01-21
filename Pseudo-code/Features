@@ -1,0 +1,13 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Fun_with_Flags~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+used the TK inter GUI to get the user to input a three didgit username to make a high score list possibly?? How do???? Database required?
+Have a few options to select icons of flags attatched to a numbered input. more than 5 or six flags.
+when the user chooses a flag print by inputting the number next to the associated flag on Tkinter print it on the fade candy LED's.
+( if number isn't) part of the suggested numbers prompt them again and if they use letters or special characters do the same.
+make the flag size 30x6
+first print the background of the flag (Rectangle, sqquares only)
+Then print the foreground using array manipulation and for loops
+Prompt the user to guess the name of the country associated with thnat flag. 
+If they get it correct project a circle(hollow maybe) tick onto the LED's and ask the user to pick another flag.
+If they choose incorrectly project a red X in a (hollow circle) onto the LED's
+display a small x onto the corner of the screen or on Tk inter. 3 x's before all the flags are corrextly guessed == Game over 
+
