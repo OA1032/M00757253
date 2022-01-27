@@ -5,7 +5,10 @@
 #make into functions
 #Add a colour dictionairy
 #diagonals = i+62/b -58 (60 +/- gap depending on direction)
-
+'''make if statement with multiconditional for the 
+colours of the flag and led position in each row
+MAybe make it a function so it doesnt have to be repeated constaantly
+most likely will have to do so for each individual flag..... RIP'''
 import opc
 import time
 
@@ -23,7 +26,9 @@ loop = 0
    # if led = range()# do for colours
         colour[i] =(0,255,255)
         client.put_pixels(colour)
-        time.sleep(0.1)'''
+        time.sleep(0.1)
+        make if statement with multiconditional for the 
+        colours of the flag and led position in each row'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''#Inverse_Nigeria currently
 for i in range(11,50,1):
@@ -153,7 +158,6 @@ for i in range(3):
         time.sleep(0.1)
     inc = inc + 1
     print ("inc =",inc)
-
     ''' for x in range (i,360,i+60):
         colour[i-60] =(0,0,0)
         client.put_pixels(colour)
@@ -178,6 +182,15 @@ for i in range(3):
                 client.put_pixels(colour)
                 #time.sleep(0.1)
                 # i +1
+                ''' for x in range (i,360,i+60):
+                colour[i-60] =(0,0,0)
+                client.put_pixels(colour)
+                client.put_pixels(colour)
+                #turn led off above (i-60)
+                colour[x] =(255,255,255)
+                client.put_pixels(colour)
+                client.put_pixels(colour)
+                #print vertically down'''
         inc = inc + 1
         print ("inc =",inc)
     if i == 10 or i == 50:
@@ -186,3 +199,4 @@ for i in range(3):
         # increment 6 times 
         ##need to add vertical print 
         #downwards with deletion occruring in line with inrement number
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
