@@ -18,8 +18,6 @@ client = opc.Client('localhost:7890')
 
    # new_colour =(r,g,b)
    #client.put_pixels(colour)
-inc = 0
-loop = 0
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags__Horizontal_Slow_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ''''for i in range(0,360):
     #Led printing stating point
@@ -137,13 +135,25 @@ for i in range(11,50,1):
     if i % 3 == 0:
         print("")
         for x in range (i,,)'''
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_Sideways~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#for i in range (6):
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_Sideways_Test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''for rows in range(6):
+    colour_wall[colour+1 + rows*60] =(255,255,255)
+    colour = colour + 1
+    client.put_pixels(colour_wall)
 
-#for i in range (6):
+
+for rows in range (6):
+    colour_wall[colour-1 + rows*60] =(255,255,255)
+    colour = colour - 1
+    client.put_pixels(colour_wall)
+    
+    '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Horglass_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inc = 0
+loop = 0
+
 for i in range(3):
     for i in range(10,51):
         print(i)
