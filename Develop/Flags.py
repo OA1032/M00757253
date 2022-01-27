@@ -20,7 +20,7 @@ client = opc.Client('localhost:7890')
    #client.put_pixels(colour)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags__Horizontal_Slow_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ''''for i in range(0,360):
-    #Led printing stating point
+    #Led printing starting point
    # if led = range()# do for colours
         colour[i] =(0,255,255)
         client.put_pixels(colour)
@@ -146,12 +146,50 @@ for rows in range (6):
     colour_wall[colour-1 + rows*60] =(255,255,255)
     colour = colour - 1
     client.put_pixels(colour_wall)
-    
     '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Horglass_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Hourglass_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 inc = 0
+loop = 0
+
+for i in range(3):
+    for i in range(10,51):
+        print("i = ", i)
+        colour[i] =(255,255,255)
+        client.put_pixels(colour)
+        client.put_pixels(colour)
+        time.sleep(0.1)
+        colour[i] =(0,0,0)
+        client.put_pixels(colour)
+        client.put_pixels(colour)
+        #vert print code here
+        for x in range(i):
+            x = i + 60
+            print("x = ",x)
+            colour[x] =(255,255,255)
+            client.put_pixels(colour)
+            client.put_pixels(colour)
+            time.sleep(0.05)
+            colour[x] =(0,0,0)
+            client.put_pixels(colour)
+            client.put_pixels(colour)
+            if x == x: 
+                break
+    if i == 50:
+        for x in range(50,10,-1):
+            print ("x = ", x)
+            colour[x] =(255,255,255)
+            client.put_pixels(colour)
+            client.put_pixels(colour)
+            time.sleep(0.1)
+            #vert print code here 
+            time.sleep(0.1)
+            colour[x] =(0,0,0)
+            client.put_pixels(colour)
+            client.put_pixels(colour)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Dribble_Line_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''inc = 0
 loop = 0
 
 for i in range(3):
@@ -166,17 +204,16 @@ for i in range(3):
         client.put_pixels(colour)
         client.put_pixels(colour)
         time.sleep(0.1)
+        for x in range(i+60):
+            x = i + 60*inc
+            colour[x] =(255,255,255)
+            client.put_pixels(colour)
+            client.put_pixels(colour)
+            if x == x:
+                break
+        print("x =",x)
     inc = inc + 1
     print ("inc =",inc)
-    ''' for x in range (i,360,i+60):
-        colour[i-60] =(0,0,0)
-        client.put_pixels(colour)
-        client.put_pixels(colour)
-        #turn led off above (i-60)
-        colour[x] =(255,255,255)
-        client.put_pixels(colour)
-        client.put_pixels(colour)
-        #print vertically down'''
     if i == 50:
         for i in range (50,9,-1):
             print (i)
@@ -192,15 +229,15 @@ for i in range(3):
                 client.put_pixels(colour)
                 #time.sleep(0.1)
                 # i +1
-                ''' for x in range (i,360,i+60):
-                colour[i-60] =(0,0,0)
-                client.put_pixels(colour)
-                client.put_pixels(colour)
-                #turn led off above (i-60)
+            for x in range(i):
+                x = i + 60*inc
                 colour[x] =(255,255,255)
                 client.put_pixels(colour)
                 client.put_pixels(colour)
-                #print vertically down'''
+                print("x = ", x)
+                if x == x:
+                    break
+                #time.sleep(0.1)
         inc = inc + 1
         print ("inc =",inc)
     if i == 10 or i == 50:
@@ -208,5 +245,5 @@ for i in range(3):
         print ("loop = ",loop)
         # increment 6 times 
         ##need to add vertical print 
-        #downwards with deletion occruring in line with inrement number
+        #downwards with deletion occruring in line with inrement number'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
