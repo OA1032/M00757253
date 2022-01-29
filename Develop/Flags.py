@@ -19,14 +19,16 @@ client = opc.Client('localhost:7890')
    # new_colour =(r,g,b)
    #client.put_pixels(colour)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags__Horizontal_Slow_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-''''for i in range(0,360):
+'''
+for i in range(0,360):
     #Led printing starting point
    # if led = range()# do for colours
         colour[i] =(0,255,255)
         client.put_pixels(colour)
         time.sleep(0.1)
-        make if statement with multiconditional for the 
-        colours of the flag and led position in each row'''
+   #     make if statement with multiconditional for the 
+   #     colours of the flag and led position in each row
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''#Inverse_Nigeria currently
 for i in range(11,50,1):
@@ -74,39 +76,46 @@ for i in range(11,50,1):
                 #colour[x] = (0,255,255) 
                 #client.put_pixels(colour)
             if x > i:  
-                print("x =",x)'''
+                print("x =",x)
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_1st_Line_Vertical_Horizontal_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range(10,51,1):
+'''
+for i in range(10,51,1):
     #Led printing stating point
     #if led = range()
-        colour[i] =(0,255,255)
-        client.put_pixels(colour)
+    colour[i] =(0,255,255)
+    client.put_pixels(colour)
+    time.sleep(0.1)
     print("i =",i)
     for x in range(i,361,60):
-    #print vertically down
-    if x > 100: 
-        sleep(0.1)
-    #if led = range()
-        colour[i] =(0,255,255)
-        client.put_pixels(colour)
-        if x > i:  
-            print("x =",x)
-            #No sleeps = new animation'''
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Horizontal_print(FAST)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range(10,51,1):
+        #print vertically down
+        if x > 100: 
+        #if led = range()
+            colour[x] =(0,255,255)
+            client.put_pixels(colour)
+            if x > i:  
+                print("x =",x)
+                #No sleeps = new animation
+'''
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Horizontal_print(HalfSlow_HalfFAST)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
+for i in range(10,51,1):
     #Led printing stating point
     #if led = range()
     print("i =",i)
     for x in range(i,361,60):
         #print vertically down
         #if led = range()
-        colour[i] =(0,255,255)
+        colour[x] =(0,255,255)
         client.put_pixels(colour)
-        if x > i:  
+        if 180 > x:  
+            time.sleep(0.1)
             print("x =",x)
-            #No sleeps = new animation'''
+            #No sleeps = new animation
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Horizontal_print_Downwards~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range(0,360):
+'''
+for i in range(0,360):
     #Led printing stating point
     #if led = range()
         colour[i] =(0,255,255)
@@ -114,45 +123,49 @@ for i in range(11,50,1):
     #print("i =",i)
     if i == 60 or i ==120 or i == 180 or i == 240 or i == 300:
         time.sleep(0.1)
-        print('sleep')'''
+        print('sleep')
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_Print_Sideways~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range(10,51,1):
+'''
+for i in range(10,51,1):
     #Led printing starting point
     #if led = range()
     print("i =",i)
     for x in range(i,361,60):
     #print vertically down
     #if led = range()
-        colour[i] =(0,255,255)
+        colour[x] =(0,255,255)
         client.put_pixels(colour)    
         if x > i:  
             print("x =",x)
-    if i > 300:
+            time.sleep(0.01)
+    if x > 300:
         time.sleep(0.1)
-        print('sleep')'''
+        print('sleep')
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_Print_Sideways~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range (0,360):
+'''
+for i in range (0,360):
     if i % 3 == 0:
         print("")
-        for x in range (i,,)'''
+        for x in range (i)
+        '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_Sideways_Test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for rows in range(6):
+'''
+for rows in range(6):
     colour_wall[colour+1 + rows*60] =(255,255,255)
     colour = colour + 1
     client.put_pixels(colour_wall)
-
 
 for rows in range (6):
     colour_wall[colour-1 + rows*60] =(255,255,255)
     colour = colour - 1
     client.put_pixels(colour_wall)
     '''
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Hourglass_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
 inc = 0
 loop = 0
-'''
 for i in range(3):
     for i in range(10,51):
         print("i = ", i)
@@ -188,10 +201,11 @@ for i in range(3):
             colour[x] =(0,0,0)
             client.put_pixels(colour)
             client.put_pixels(colour)
+            '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Dribble_Line_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
 inc = 0
 loop = 0
-
 for i in range(3):
     for i in range(10,51):
         print(i)
@@ -247,4 +261,22 @@ for i in range(3):
         ##need to add vertical print 
         #downwards with deletion occruring in line with inrement number
 '''
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Sand_pour~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass_Lid~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass_45_deg~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Hourglass_90_deg~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building_wipe~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building_4_corner_at_once~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building_outside_to_inside~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Multi_Section_Wipe_vertical_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Multi_Section_Wipe_Horizontal_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_level_Slotting_flag_building_Horizontal~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_level_Slotting_flag_building_Vertical~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Top_and_bottom_brought_together~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Right_and_left_brought_together~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_part_custom_flag~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Vertical or Horizontal,Stripe Number(max of three),Background,Forground,Emblem shape(Square,Circle,Triangle,Diamond),Emblem position(Left,Centre,Right)
+# Choose colours for each relevant option from a dictionary of 10 colours or so. build each element from a random transition.
+#
