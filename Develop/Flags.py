@@ -31,7 +31,8 @@ for i in range(0,360):
    #     colours of the flag and led position in each row
 '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''#Inverse_Nigeria currently
+'''
+#Inverse_Nigeria currently
 for i in range(11,50,1):
     #time.sleep(0.1)
     if i >= 10 and i < 24: 
@@ -209,7 +210,7 @@ for i in range(3):
             colour[x] =(0,0,0)
             client.put_pixels(colour)
             client.put_pixels(colour)
-            '''
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Dribble_Line_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
 inc = 0
@@ -279,7 +280,110 @@ for i in range(3):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building_4_corner_at_once~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Diagonal_flag_building_outside_to_inside~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Multi_Section_Wipe_vertical_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
+for i in range (4):
+    print("inc",i)
+    for i in range (10,51):
+        print (i)
+        colour[i] =(255,255,255)
+        client.put_pixels(colour)
+        if i ==20:
+            print() 
+        if i ==30:
+            print()
+        if i ==40:
+            print()
+        if i ==50:
+            print()
+        if i >= 10 and i <= 20:
+            for x in range (i,21):
+                #print("x",x)
+                row1 = x + 60*1
+                print("row1",row1)
+                colour[row1] =(255,255,255)
+                client.put_pixels(colour)
+                time.sleep(0.1)
+                if x == x:
+                    break
+        if i > 20 and i <= 30:
+            #print("2nd strip")
+            for x in range (i,30):
+                #print("x",x)
+                row1 = x + 60*1
+                print("row1",row1)
+                colour[row1] =(255,255,255)
+                client.put_pixels(colour)
+                #print("x2",x)
+                row2 = x + 60*2
+                print("row2",row2)
+                colour[row2] =(255,255,255)
+                client.put_pixels(colour)
+                #time.sleep(0.1)
+                #print("x3",x)
+                row3 = x + 60*3
+                print("row3",row3)
+                colour[row3] =(255,255,255)
+                client.put_pixels(colour)
+                #time.sleep(0.1)
+                #print("x4",x)
+                row4 = x + 60*4
+                print("row4",row4)
+                colour[row4] =(255,255,255)
+                client.put_pixels(colour)
+               # time.sleep(0.1)
+                #print("x4",x)
+                row5 = x + 60*5
+                print("row5",row5)
+                colour[row5] =(255,255,255)
+                client.put_pixels(colour)
+                #time.sleep(0.1)
+                if x == x:
+                    break
+            if row1 == 90 or row2 ==150 or row3 ==210 or row4 == 270 or row5 == 330:
+                time.sleep(1)
+                print("slept!")
+        if i > 30 and i <= 40:
+            #print("3rd strip")
+            for x in range (i,41):
+                #print("x3",x)
+                row3 = x + 60*3
+                print("row3",row3)
+                colour[row3] =(255,255,255)
+                client.put_pixels(colour)
+                time.sleep(0.1)
+                if x == x:
+                    break
+        if i > 40 and i <= 45:
+            #print("4th strip")
+            for x in range (i,46):
+                #print("x4",x)
+                row4 = x + 60*4
+                print("row4",row4)
+                colour[row4] =(255,255,255)
+                client.put_pixels(colour)
+                time.sleep(0.1)
+                if x == x:
+                    break
+        if i > 45 and i < 51:
+            #print("4th strip")
+            for x in range (i,51):
+                #print("x4",x)
+                row5 = x + 60*5
+                print("row5",row5)
+                colour[row5] =(255,255,255)
+                client.put_pixels(colour)
+                time.sleep(0.1)
+                if x == x:
+                    break
+        if i == 50:
+            for x in range(361):
+                print(x)
+               # if x > and x <
+               #Not quite doing what I want it to yet
+'''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Multi_Section_Wipe_Horizontal_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Multi_Section_Wipe_Horizontal_and_Vertical_flag_building~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_level_Slotting_flag_building_Horizontal~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_level_Slotting_flag_building_Vertical~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Top_and_bottom_brought_together~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -304,8 +408,6 @@ for i in range(3):
 
 '''
 
-
-
 def vertical():
 
 def horizontal():
@@ -320,4 +422,83 @@ def foreground():
 
 def emblem(position):
     #bird,square,diamon,circle,triangle
+'''
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flag_Order of operations~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'''
+1. Enter username and Password, TKinter Make password * put into SQL database
+
+2. "Hello 'Username! , Would you like to make a flag and see some animations' "
+
+3. Window pops up with two options; Yes and No
+
+4. If user selects no close program
+
+5. If user selects yes create new pop up windows with options for creating a flag or seeing the Hourglass animation 
+
+6. If the Hourglass button is selected play the animation after a  3 2 1 countdown with fading numbers 
+
+7. If the flag creation button is selected pop up a new window asking "How many stripes do you want? 
+pick a number from one to six and type it in the window. (or a slider) " Find a way to accept ints ( 1, 2 , 3 ,4 , 5, 6) 
+and strings("one,two,three,four,five,six"Convert these strings into lowercase before processing them so they all can be 
+accepted) if they chose any other options ask them again stating "The answer you gave was invalid.Please input another."
+
+8. Add another pop up window, asking " what orientation do you want these stripes? "Vertical or Horizontal" as 
+interactable buttons. Try to fade the orientations in the background until a choice is chosen for the selections
+the user has made. 
+
+9. Another pop up window with a bunch of coloured buttons asking for the stripe colours. "Pick a colour for the odd 
+stripes" (1,3,5)
+
+10. Followed by "Pick a colour for the even stripes" (2,4,6) using coloured buttons also.
+
+The coloured buttons access the colour for the stripes via a colour dictionary.
+
+11. Next popup window "Pick an emblem for your flag." show buttons of choices(Triangle, Square, Diamond,Circle,Star,
+Hourglass, Heart, Pacman) With pictures on the buttons of those emblems. Emblems show, fade and then change to the next emblem.
+
+12. Another popup, "Please chose emblem position" (Choices are as follows; Left, center,right)
+
+13.  Popup, "Please chose emblem orientation" (Rotate clockwise 90,180,270 deg)"
+
+14. After all selections are made. Final popup, "Would you like to build the flag?" Yes no options.
+
+15. If user Yes makes the flag with a random animation made above, If no ends the program and takes you to the flag building and 
+animation section window. 
+
+Extras:
+
+Save flags with user names and passswords
+
+Add a status bar 
+
+Add sound design maybe?
+
+'''
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Arduino~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import serial  # if missing in the command prompt or terminal  python-pip install pyserial
+## Arduino code(Serial.available() > 0) {
+# incomingByte = Serial.read()
+# if incomingByte is string;
+#       display string on LCD somehow
+# }
+# 
+'''
+arduino = serial.Serial('COM3',9600)
+time.sleep(2)
+
+#exaple for multiple input
+# pot1,pot2, ldr = int(data.split(',')) # "255,204,0" = ["255","204","0"] = [255,204,0]
+
+def send_to_arduino(data):
+    arduino.write(str(data).encode('bytes'))
+
+
+while True:
+    data = int(arduino.readline().decode('utf-8'))# work for default println behaviour. use str() if you are sending large datasets
+    print(data)
+
+    # within the folder, puthon filename.py
+
+sent_to_arduino()
+
 '''
