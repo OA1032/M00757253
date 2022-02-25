@@ -19,14 +19,19 @@ client = opc.Client('localhost:7890')
 
    # new_colour =(r,g,b)
    #client.put_pixels(colour)
+   #Think about Multiprocessing, Multithreading,Colour Dictionaries ,Switch cases, 7 buttons fro animations on TKinter, Classes
+   # 1.Turning, counting down amd filling up Hourglass, 2.Water Droplet filling up the LEDs bars until all are blue,3. Falling and compressing ball(Classic animation practice),Marracas, Curtains, 
+   # 4.Interesting Flag animations(waving FLAG),5. Coundown with shape closing in to form the count down numbers
+   # 6.Morphing square into circle while spinning it and moving it acreoss the screen 
+   #  7. Sunset sky animation with a fading backdrop that is vertical
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags__Horizontal_Slow_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
 for i in range(0,360):
     #Led printing starting point
    # if led = range()# do for colours
-        colour[i] =(0,255,255)
-        client.put_pixels(colour)
-        time.sleep(0.1)
+    colour[i] =(0,255,255)
+    client.put_pixels(colour)
+    time.sleep(0.1)
    #     make if statement with multiconditional for the 
    #     colours of the flag and led position in each row
 '''
@@ -87,11 +92,11 @@ for i in range(10,51,1):
     #if led = range()
     colour[i] =(0,255,255)
     client.put_pixels(colour)
-    time.sleep(0.1)
+    time.sleep(0.5)
     print("i =",i)
     for x in range(i,361,60):
         #print vertically down
-        if x > 100: 
+        if x > 60: 
         #if led = range()
             colour[x] =(0,255,255)
             client.put_pixels(colour)
@@ -111,7 +116,7 @@ for i in range(10,51,1):
         colour[x] =(0,255,255)
         client.put_pixels(colour)
         if 180 > x:  
-            time.sleep(0.1)
+            time.sleep(0.2)
             print("x =",x)
             #No sleeps = new animation
 '''
@@ -147,18 +152,11 @@ for i in range(10,51,1):
         client.put_pixels(colour)    
         if x > i:  
             print("x =",x)
-            time.sleep(0.01)
+            #time.sleep(0.01)
     if x > 300:
-        time.sleep(0.1)
+        time.sleep(0.2)
         print('sleep')
 '''
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Vertical_Print_Sideways~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''
-for i in range (0,360):
-    if i % 3 == 0:
-        print("")
-        for x in range (i)
-        '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Diagonal_Print_Sideways_Test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
 for rows in range(6):
@@ -389,7 +387,8 @@ for i in range (4):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Top_and_bottom_brought_together~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Right_and_left_brought_together~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-'''for i in range(10,50):
+'''
+for i in range(10,50):
     print("i",i)
     colour[i] =(255,255,255)
     client.put_pixels(colour)
@@ -400,7 +399,8 @@ for i in range (4):
     print("x",x)
     colour[x] =(255,255,255)
     client.put_pixels(colour)
-    time.sleep(0.1)'''
+    time.sleep(0.1)
+    '''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~3_part_custom_flag~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Vertical or Horizontal,Stripe Number(max of three),Background,Forground,Emblem shape(Square,Circle,Triangle,Diamond),Emblem position(Left,Centre,Right)
 # Choose colours for each relevant option from a dictionary of 10 colours or so. build each element from a random transition.
