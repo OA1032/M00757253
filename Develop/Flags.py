@@ -20,10 +20,14 @@ client = opc.Client('localhost:7890')
    # new_colour =(r,g,b)
    #client.put_pixels(colour)
    #Think about Multiprocessing, Multithreading,Colour Dictionaries ,Switch cases, 7 buttons fro animations on TKinter, Classes
-   # 1.Turning, counting down amd filling up Hourglass, 2.Water Droplet filling up the LEDs bars until all are blue,3. Falling and compressing ball(Classic animation practice),Marracas, Curtains, 
-   # 4.Interesting Flag animations(waving FLAG),5. Coundown with shape closing in to form the count down numbers
+   # 1.Turning, counting down amd filling up Hourglass, 
+   # 2.Water Droplet filling up the LEDs bars until all are blue,
+   # 3. Falling and compressing ball(Classic animation practice),
+   # 3.5 Marracas, Curtains, 
+   # 4.Interesting Flag animations(waving FLAG)A button that cylcles through the flag animations I have made based on the number of presses,
+   # 5. Coundown with shape closing in to form the count down numbers
    # 6.Morphing square into circle while spinning it and moving it acreoss the screen 
-   #  7. Sunset sky animation with a fading backdrop that is vertical
+   # 7. Sunset sky animation with a fading backdrop that is vertical Maybe with the sun setting and the sea tide flowing. More of an ambiant animation.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags__Horizontal_Slow_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 '''
 for i in range(0,360):
