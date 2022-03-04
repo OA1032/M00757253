@@ -149,7 +149,7 @@ def an6():# Function paramenter title
             time.sleep(0.2)# small wait 
             print('sleep') # functionality check using strings 
 
-    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Incomplete~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Droplet~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def an7(): # Incomplete function 
     drop = [117,116,115,114,179,178,177,176,175,174,173,237,236,235,234] # water droplet list location(for image of the droplet)
    
