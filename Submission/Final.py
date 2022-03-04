@@ -151,33 +151,24 @@ def an6():# Function paramenter title
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Incomplete~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def an7(): # Incomplete function 
-    drop = [117,116,115,114,179,178,177,176,175,174,173,237,236,235,234] # water droplet list location
+    drop = [117,116,115,114,179,178,177,176,175,174,173,237,236,235,234] # water droplet list location(for image of the droplet)
    
-    for i in range(10):
-        for water in drop:
-            time.sleep(0.01)
-            colour[water-i*5] =(0,0,255) 
+    for i in range(10):# water droplet is formed 10 times 
+        for water in drop:# for loop for the formation of droplet 
+            time.sleep(0.01)#small wait 
+            colour[water-i*5] =(0,0,255) # water droplet position 
             client.put_pixels(colour)
-            print(water)
-        print ("this is i" ,i)
-        if water > 0 and water < 60:
-            break
+            print(water)# print to check position 
+        print ("this is i" ,i)# checking iteration number 
 
-        for x in range(0,247):
-            time.sleep(0.01)
-            colour[x] =(0,0,0) 
+        for x in range(0,247): # iterate from the first row till nearly the end of the 4th row 
+            time.sleep(0.01)# small wait
+            colour[x] =(0,0,0) # set RGB to black in position x 
             client.put_pixels(colour)
-            print("deletion",x)
+            print("deletion",x) # removing any colour
     
-    if colour[x] == 60 or colour[x] == 120 or colour[x] == 180 or colour[x] == 240:
-        time.sleep(0.1)
-
-
-            
-
-
-
-
+    if colour[x] == 60 or colour[x] == 120 or colour[x] == 180 or colour[x] == 240: # multi conditional points to stop
+        time.sleep(0.1)# pause for a short while 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Flags_Dribble_Line_print~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def an8():#define function 
