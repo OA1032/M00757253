@@ -25,3 +25,4 @@ which shows a virtual 60x6 grid of LEDs in which you are going to view the vario
 - While running another window will pop up displaying some prints I used in order to assist me in the development of this code.
 
 Some buttons are unavailable due to the developmental issues.
+- Make sure to have up to data java also.
